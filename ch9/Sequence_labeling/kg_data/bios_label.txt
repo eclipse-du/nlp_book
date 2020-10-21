@@ -1,0 +1,9 @@
+0	O
+1	Person-B
+5	Relation-B
+2	Person-I
+7	Relation-E
+3	Person-E
+6	Relation-I
+4	Person-S
+8	Relation-S
