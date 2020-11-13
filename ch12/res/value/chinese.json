@@ -1,0 +1,180 @@
+{
+	"version" : "2019-10-01 v1.0",
+	"language" : "chinese",
+	"vocabulary" : [{
+			"name" : "ArabicNum",
+			"value": [
+				"[0-9]+(\\.[0-9]+)?", "[０-９]+([\\..][０-９]+)?"
+			]
+		},{
+			"name" : "ArabicCode",
+			"value": [
+				"[0-9]+", "[０-９]+"
+			]
+		},{
+			"name" : "SciCounting",
+			"value": [
+				"[0-9]+(\\.[0-9]+)?[eE]-?[0-9]+"
+			]
+		},{
+			"name" : "ChineseNum",
+			"value": [
+				"[零一二三四五六七八九十百千万亿]+"
+			]
+		},{
+			"name" : "ChineseCode",
+			"value": [
+				"[零一二三四五六七八九]+"
+			]
+		},{
+			"name" : "ArabicLeveled",
+			"value": [
+				"[0-9]+0+", "[０-９]+０+"
+			]
+		},{
+			"name" : "ChineseLeveled",
+			"value": [
+				"[零一二三四五六七八九十百千万亿]*[十百千万亿]+"
+			]
+		},{
+			"name" : "ApproximatePrefix",
+			"value": [
+				"几","数"
+			]
+		},{
+			"name" : "ApproximateMiddle",
+			"value": [
+				"几","多","来","余"
+			]
+		},{
+			"name" : "ChineseLevel",
+			"value": [
+				"十","百","千","万","十万","百万","千万","亿","万亿"
+			]
+		},{
+			"name" : "ApproximateHead",
+			"value": [
+				"大约","约","大概","差不多","近","将近","接近"
+			]
+		},{
+			"name" : "ApproximateTail",
+			"value": [
+				"前后","左右"
+			]
+		},{
+			"name" : "LargerThanHead",
+			"value": [
+				"超","破","突破","超过","大于","高于","多于"
+			]
+		},{
+			"name" : "LargerThanTail",
+			"value": [
+				"以上"
+			]
+		},{
+			"name" : "SmallerThanHead",
+			"value": [
+				"逾","不足","不到","小于","低于","少于"
+			]
+		},{
+			"name" : "SmallerThanTail",
+			"value": [
+				"以下"
+			]
+		}
+	],
+	"normalizers" : [
+	],
+	"rules" : [{
+			"ruleName" : "fraction",
+			"extraction" : "($<ChineseNum>|$<ArabicCode>)分之($<ChineseNum>|$<ArabicCode>)",
+			"type" : "NUM",
+			"normalization" : "%Div( NormNumber(group(4)),NormNumber(group(1)) )"
+		},{
+			"ruleName" : "compound_fraction",
+			"extraction" : "($<ChineseNum>|$<ArabicCode>)又($<ChineseNum>|$<ArabicCode>)分之($<ChineseNum>|$<ArabicCode>)",
+			"type" : "NUM",
+			"normalization" : "%Add(NormNumber(group(1)), Div( NormNumber(group(7)),NormNumber(group(4)) ))"
+		},{
+			"ruleName" : "decimals",
+			"extraction" : "$<ChineseNum>点$<ChineseCode>",
+			"type" : "NUM",
+			"normalization" : "%Dot(NormNumber(group(1)), NormNumber(group(2))"
+		},{
+			"ruleName" : "decimal_fraction_r1",
+			"extraction" : "$<ChineseNum>分之$<ChineseNum>点$<ChineseCode>",
+			"type" : "NUM",
+			"normalization" : "%Div( Dot( NormNumber(group(2)), NormNumber(group(3)) ),NormNumber(group(1)))"
+		},{
+			"ruleName" : "decimal_fraction_r2",
+			"extraction" : "$<ChineseNum>分之$<ArabicCode>\\.$<ArabicCode>",
+			"type" : "NUM",
+			"normalization" : "%Div( Dot( NormNumber(group(2)), NormNumber(group(3))), NormNumber(group(1)) )"
+		},{
+			"ruleName" : "decimal_fraction_r3",
+			"extraction" : "$<ChineseNum>点$<ChineseCode>分之$<ChineseNum>",
+			"type" : "NUM",
+			"normalization" : "%Div(NormNumber(group(3)), Dot(NormNumber(group(1)), NormNumber(group(2))))"
+		},{
+			"ruleName" : "quantified_level",
+			"extraction" : "$<ChineseNum>个(亿)",
+			"type" : "NUM",
+			"normalization" : "%Level(NormNumber(group(1)), group(2))"
+		},{
+			"ruleName" : "approximate_r1",
+			"extraction" : "$<ChineseLeveled>$<ApproximateMiddle>",
+			"type" : "RANGE",
+			"normalization" : "[%NormNumber(group(1)) ~ %Max( NormNumber(group(1)) )]"
+		},{
+			"ruleName" : "approximate_r2",
+			"extraction" : "$<ArabicLeveled>$<ApproximateMiddle>",
+			"type" : "RANGE",
+			"normalization" : "[%NormNumber(group(1)) ~ %Max( NormNumber(group(1)) )]"
+		},{
+			"ruleName" : "approximate_r3",
+			"extraction" : "$<ChineseLeveled>$<ApproximateMiddle>$<ChineseLevel>",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+			"type" : "RANGE",
+			"normalization" : "[%Level(NormNumber(group(1)), group(3)) ~ %Max( Level(NormNumber(group(1)), group(3)) )]"
+		},{
+			"ruleName" : "approximate_r4",
+			"extraction" : "$<ArabicLeveled>$<ApproximateMiddle>$<ChineseLevel>",
+			"type" : "RANGE",
+			"normalization" : "[%Level(NormNumber(group(1)),group(3)) ~ %Max( Level(NormNumber(group(1)),group(3)) )]"
+		},{
+			"ruleName" : "approximate_r5",
+			"extraction" : "$<ApproximatePrefix>$<ChineseLevel>",
+			"type" : "RANGE",
+			"normalization" : "[%Level(1, group(2)) ~ %Level(9, group(2))]"
+		},{
+			"ruleName" : "approximate_r6",
+			"extraction" : "$<ApproximateHead>($<ChineseNum>|$<ArabicCode>)",
+			"type" : "RANGE",
+			"normalization" : "[%NormNumber(group(2)) ~ %NormNumber(group(2))]"
+		},{
+			"ruleName" : "approximate_r7",
+			"extraction" : "($<ChineseNum>|$<ArabicCode>)$<ApproximateTail>",
+			"type" : "RANGE",
+			"normalization" : "[%NormNumber(group(1)) ~ %NormNumber(group(1))]"
+		},{
+			"ruleName" : "larger_than_r1",
+			"extraction" : "$<LargerThanHead>($<ChineseNum>|$<ArabicCode>)",
+			"type" : "RANGE",
+			"normalization" : "[%NormNumber(group(2)) ~ ∞]"
+		},{
+			"ruleName" : "larger_than_r2",
+			"extraction" : "($<ChineseNum>|$<ArabicCode>)以上",
+			"type" : "RANGE",
+			"normalization" : "[%NormNumber(group(1)) ~ ∞]"
+		},{
+			"ruleName" : "smaller_than_r1",
+			"extraction" : "$<SmallerThanHead>($<ChineseNum>|$<ArabicCode>)",
+			"type" : "RANGE",
+			"normalization" : "[-∞ ~ %NormNumber(group(2))]"
+		},{
+			"ruleName" : "smaller_than_r2",
+			"extraction" : "($<ChineseNum>|$<ArabicCode>)以下",
+			"type" : "RANGE",
+			"normalization" : "[-∞ ~ %NormNumber(group(1))]"
+		}
+	]
+}

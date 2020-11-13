@@ -1,0 +1,691 @@
+{
+	"version" : "2019-10-01 v1.0",
+	"language" : "chinese",
+	"vocabulary" : [{
+			"name" : "ApproximateHead",
+			"value": [
+				"大约","约","大概","差不多","近似","将近","近于","近","几乎"
+			]
+		},
+		{
+			"name" : "ApproximateMiddle",
+			"value": [
+				"来","多","余"
+			]
+		},
+		{
+			"name" : "ApproximateTail",
+			"value": [
+				"前后", "左右"
+			]
+		},
+		{
+			"name" : "BeforeAfter",
+			"value": [
+				"前", "之前", "以前", "后", "之后", "以后"
+			]
+		},
+		{
+			"name" : "CountWord",
+			"value": [
+				"百","千","万","十万","百万","千万","亿"
+			]
+		},
+		{
+			"name" : "DateLocalNumber",
+			"value": [
+				"0?[1-9]","[12][0-9]","3[01]",
+				"０?[１２３４５６７８９]","[１２][０１２３４５６７８９]","[３][０１]",
+				"一","二","三","四","五","六","七","八","九","十","十[一二三四五六七八九]","二十",
+				"二十[一二三四五六七八九]","三十","三十一"
+			]
+		},
+		{
+			"name" : "DayAndPart",
+			"value": [
+				"今晨","今早","今晚","今夜","今宵","昨晚","明早","明晚"
+			]
+		},
+		{
+			"name" : "DayThisNextLast",
+			"value": [
+				"大前天","前天","昨天","今天","明天","后天","大后天"
+			]
+		},
+		{
+			"name" : "DecadeNumber",
+			"value": [
+				"二十","三十","四十","五十","六十","七十","八十","九十"
+			]
+		},
+		{
+			"name" : "Dynasty",
+			"value": [
+				"民国","清代","清朝","明代","明朝","元代","元朝",
+				"宋代","宋朝","金朝","南宋","北宋","五代","五代十国","唐代","唐朝"
+			]
+		},
+		{
+			"name" : "Era",
+			"value": [
+				"公元", "公元前"
+			]
+		},
+		{
+			"name" : "FiveYearPlanWords",
+			"value": [
+				"一五","二五","三五","四五","五五","六五","七五","八五","九五","十五",
+				"十一五","十二五","十三五"
+			]
+		},
+		{
+			"name" : "HourNumber",
+			"value" : [
+				"0?[1-9]", "1[0-9]", "2[0-4]", "０?[１-９]", "１[０-９]", "2[０-４]", "[零一二三四五六七八九十]", 
+				"十[一二三四五六七八九]", "二十", "二十[一二三四]"
+			]
+		},
+		{
+			"name" : "FixHolidayWords",
+			"value" : [
+				"元旦","情人节","妇女节","三八妇女节","愚人节","清明节","劳动节","五一劳动节","青年节","五四青年节",
+				"儿童节","六一儿童节","建军节","八一建军节","教师节","国庆节","万圣节","圣诞节"
+			]
+		},
+		{
+			"name" : "Integer",
+			"value": [
+				"\\d+","[０-９]+","[零一二三四五六七八九十百千万]+"
+			]
+		},
+		{
+			"name" : "LunarHolidayWords",
+			"value" : [
+				"春节","农历新年","元宵节","端午节","端阳节","七夕","中元节","中秋节","重阳节","腊八节","除夕"
+			]
+		},
+		{
+			"name" : "MinuteSecondNumber",
+			"value": [
+				"0?[1-9]", "[1-5][0-9]", "[零一二三四五六七八九十]",
+				"零[零一二三四五六七八九]", "[二三四五]?十[一二三四五六七八九]"
+			]
+		},
+		{
+			"name" : "MonthNumber",
+			"value": [
+				"0?[1-9]","1[0-2]","０?[１２３４５６７８９]","１[０１２]",
+				"一","二","三","四","五","六","七","八","九","十","十一","十二","元"
+			]
+		},
+		{
+			"name" : "NearFuture",
+			"value": [
+				"最近","近","过去","未来","今后","此前","此后"
+			]
+		},
+		{
+			"name" : "PartOfDay",
+			"value": [
+				"凌晨","清晨","清早","早晨","上午","早上","晨","午前","中午","正午","午间","晌午","下午","午后",
+				"日暮","黄昏","傍晚","晚上","夜晚","晚","夜里","午夜","子夜","深夜","半夜","夜半"
+			]
+		},
+		{
+			"name" : "PartOfMonth",
+			"value": [
+				"上旬","中旬","下旬","月初","月末","月底","上半月","前半月","下半月","后半月"
+			]
+		},
+		{
+			"name" : "PartOfYear",
+			"value": [
+				"第一季度","第1季度","第１季度","一季度","1季度","第１季度","第二季度","第2季度","第２季度","二季度","2季度","第２季度",
+				"第三季度","第3季度","第３季度","三季度","3季度","第３季度","第四季度","第4季度","第４季度","四季度","4季度","第４季度",
+				"最后一个季度","最后一季度","最后一季","上半年","前半年","头半年","下半年","后半年"
+			]
+		},
+		{
+			"name" : "QuarterNumber",
+			"value": [
+				"1", "2", "3", "4", "１", "２", "３", "4", "一", "二", "三", "四"
+			]
+		},
+		{
+			"name" : "Season",
+			"value": [
+				"春季","春天","春","夏天","夏季","夏","秋天","秋季","秋","冬天","冬季","冬"
+			]
+		},
+		{
+			"name" : "SolarTerm",
+			"value": [
+				"立春","雨水","惊蛰","春分","清明","谷雨","立夏","小满","芒种","夏至","小暑","大暑",
+				"立秋","处暑","白露","秋分","寒露","霜降","立冬","小雪","大雪","冬至","小寒","大寒。"
+			]
+		},
+		{
+			"name" : "ThisNextLast",
+			"value": [
+				"上上","上","这","下","下下"
+			]
+		},
+		{
+			"name" : "ThisNextLastQuantity",
+			"value": [
+				"上","上个","上一","这","这个","这一","下","下个","下一","当","本"
+			]
+		},
+		{
+			"name" : "TimeLengthNoun",
+			"value": [
+				"世纪", "月", "季度" ,"周末"
+			]
+		},
+		{
+			"name" : "TimeLengthQuantifier",
+			"value": [
+				"年", "礼拜", "星期", "周", "天", "小时", "钟头", "分钟", "秒钟", "分", "秒" 
+			]
+		},
+		{
+			"name" : "Timezone",
+			"value": [
+				"当地时间","北京时间","纽约时间"
+			]
+		},
+		{
+			"name" : "Weekday",
+			"value": [
+				"星期一","礼拜一","周一","星期二","礼拜二","周二","星期三","礼拜三","周三","星期四","礼拜四","周四",
+				"星期五","礼拜五","周五","星期六","礼拜六","周六","星期日","礼拜日","周日","星期天","礼拜天","周天"
+			]
+		},
+		{
+			"name" : "Year2Digit",
+			"value": [
+				"\\d\\d","[０１２３４５６７８９]{2}","[零〇一二三四五六七八九]{2}"
+			]
+		},
+		{
+			"name" : "Year4Digit",
+			"value": [
+				"[12]\\d\\d\\d","[一二][零〇一二三四五六七八九]{3}","[１２][０１２３４５６７８９]{3}"
+			]
+		},
+		{
+			"name" : "YearCode",
+			"value": [
+				"\\d{1,3}","[12]\\d\\d\\d","[０１２３４５６７８９]1,3}","[１２][０１２３４５６７８９]{3}",
+				"[零〇一二三四五六七八九]{1,3}","[一二][零〇一二三四五六七八九]{3}"
+			]
+		},
+		{
+			"name" : "YearThisNextLast",
+			"value": [
+				"大前年","前年","去年","今年","明年","后年","大后年"
+			]
+		}
+	],
+	"normalizers" : [{
+			"name" : "NormMonth",
+			"value": {
+				"一":"01", "二":"02", "三":"03", "四":"04", "五":"05", "六":"06",
+				"七":"02", "八":"02", "九":"02", "十":"10", "十一":"11", "十二":"12",
+				"元":"01", "1":"01", "2":"02", "3":"03", "4":"04", "5":"05", "6":"06",
+				"7":"07", "8":"08", "9":"09"
+			}
+		},
+		{
+			"name" : "NormWeekday",
+			"value": {
+				"星期一":"1", "礼拜一":"1", "周一":"1", "星期二":"2", "礼拜二":"2", "周二":"2", 
+				"星期三":"3", "礼拜三":"3", "周三":"3", "星期四":"4", "礼拜四":"4", "周四":"4", 
+				"星期五":"5", "礼拜五":"5", "周五":"5", "星期六":"6", "礼拜六":"6", "周六":"6", 
+				"星期日":"7", "礼拜日":"7", "周日":"7", "星期天":"7", "礼拜天":"7"
+			}
+		},
+		{
+			"name" : "NormEra",
+			"value": {
+				"公元前":"BC", "公元":"AD"
+			}
+		},
+		{
+			"name" : "NormFixHoliday",
+			"value": {
+				"元旦":"01-01", "情人节":"02-14",
+				"妇女节":"03-08", "三八妇女节":"03-08", "愚人节":"04-01", "清明节":"04-05",
+				"劳动节":"05-01", "五一劳动节":"05-01", "青年节":"05-04", "五四青年节":"05-04",
+				"儿童节":"06-01", "六一儿童节":"06-01", "建军节":"08-01", "八一建军节":"08-01", 
+				"教师节":"09-10", "国庆节":"10-01", "万圣节":"10-31", 
+				"平安夜":"12-24", "圣诞节":"12-25"
+			}
+		},
+		{
+			"name" : "NormDirection",
+			"value": {
+				"前":"-", "之前":"-", "以前":"-", 
+				"后":"+", "之后":"+", "以后":"+"
+			}
+		},
+		{
+			"name" : "NormDirectionValue",
+			"value": {
+				"上上":"-2", "上":"-1", "这":"0", "下":"1", "下下":"2",
+				"大前年":"-3Y", "前年":"-2Y", "去年":"-1Y", "今年":"+0Y",
+				"明年":"+1Y", "后年":"+2Y", "大后年":"+3Y", 
+				"大前天":"-3D", "前天":"-2D", "昨天":"-1D", "今天":"+0D",
+				"明天":"+1D", "后天":"+2D","大后天":"+3D"
+			}
+		},
+		{
+			"name" : "NormPartOfMonthBegin",
+			"value": {
+				"初":"01", "末":"25", "月初":"01", "月末":"25",
+				"上旬":"01", "中旬":"11", "下旬":"21",
+				"上半月":"01", "下半月":"15"
+			}
+		},
+		{
+			"name" : "NormPartOfMonthEnd",
+			"value": {
+				"初":"05/P5D", "末":"MX/", "月初": "05/P5D", "月末":"MX/",
+				"上旬":"10/P10D", "中旬":"20/P10D", "下旬":"MX/",
+				"上半月":"15/P15D", "下半月":"MX/"
+			}
+		},
+		{
+			"name" : "NormPartOfYearBegin",
+			"value": {
+				"初":"01-01", "末":"11-01",
+				"年初":"01-01", "年末":"11-01",
+				"上半年":"01-01", "下半年":"07-01"
+			}
+		},
+		{
+			"name" : "NormPartOfYearEnd",
+			"value": {
+				"初":"02-28/P2M", "末":"12-31/P2M",
+				"年初":"02-28/P2M", "年末":"12-31/P2M",
+				"上半年":"06-30/P6M", "下半年":"12-31/P6M"
+			}
+		},
+		{
+			"name" : "Future4RelativePeriod",
+			"value": {
+				"最近":"/DDDD-DD-DD", "此前":"/DDDD-DD-DD", "过去":"/DDDD-DD-DD", 
+				"未来":"DDDD-DD-DD/", "此后":"DDDD-DD-DD/", 
+				"今明":"DDDD-DD-DD/", "明后":"DDDD-DD-DD R+1D/",
+				"近":"/DDDD-DD-DD", "今后":"DDDD-DD-DD/"
+			}
+		},
+		{
+			"name" : "Quarter4Hour",
+			"value": {
+				"1":"15", "2":"30", "3":"45", "１":"15", "２":"30", "３":"45",
+				"一":"15", "二":"30", "三":"45"
+			}
+		},
+		{
+			"name" : "PartOfDayAsRange",
+			"value": {
+				"凌晨":"02:00:00/06:00:00", "清早":"05:00:00/08:00:00", "晨":"05:00:00/11:00:00", "清晨":"05:00:00/08:00:00",
+				"早晨":"05:00:00/11:00:00", "上午":"07:00:00/12:00:00", "早上":"05:00:00/11:00:00", "午前":"09:00:00/12:00:00",
+				"中午":"11:00:00/14:00:00", "正午":"12:00:00/13:00:00", "午间":"11:00:00/14:00:00", "晌午":"11:00:00/14:00:00",
+				"下午":"13:00:00/18:00:00", "午后":"13:00:00/18:00:00", "日暮":"17:00:00/19:00:00", "黄昏":"17:00:00/19:00:00", "傍晚":"17:00:00/20:00:00",
+				"晚上":"17:00:00/23:00:00", "夜晚":"19:00:00/23:00:00", "晚":"17:00:00/23:00:00",
+				"夜里":"22:00:00/26:00:00", "午夜":"22:00:00/26:00:00", "子夜":"23:00:00/25:00:00", "深夜":"T22:00:00/T26:00:00",
+				"半夜":"23:00:00/27:00:00", "夜半":"23:00:00/27:00:00"
+			}
+		},
+		{
+			"name" : "NormPartOfDay",
+			"value": {
+				"清早":"am","晨":"am","清晨":"am","凌晨":"am","早晨":"am","上午":"am","早上":"am","午前":"am",
+				"中午":"noon","正午":"noon","午间":"noon","晌午":"noon",
+				"下午":"pm","午后":"pm","日暮":"pm","黄昏":"pm","傍晚":"pm","晚上":"pm","夜晚":"pm","晚":"pm",
+				"夜里":"midnight","午夜":"midnight","子夜":"midnight","深夜":"midnight","半夜":"midnight","夜半":"midnight"
+			}
+		},
+		{
+			"name" : "Unit4Duration",
+			"value": {
+				"年":"Y", "礼拜":"W", "星期":"W", "周":"W", "天":"D", 
+				"小时":"H", "钟头":"H", "分钟":"N", "秒钟":"S", "分":"N", "秒":"S",
+				"世纪":"CE", "月":"M", "季度":"Q", "周末":"WE"
+			}
+		}
+	],
+	"rules" : [{
+			"ruleName" : "Year_c1",
+			"extraction" : "$<Year4Digit>年",
+			"type" : "DATE",
+			"normalization" : "%NormDigit(group(1))-00-00"
+		},
+		{
+			"ruleName" : "Year_c2",
+			"extraction" : "$<Year2Digit>年",
+			"type" : "DATE",
+			"normalization" : "%NormCentury(NormDigit(group(1)))-00-00"
+		},
+		{
+			"ruleName" : "Year_c3",
+			"extraction" : "$<Era>$<YearCode>年",
+			"type" : "DATE",
+			"normalization" : "%NormEra(group(1))%NormDigit(group(2))-00-00"
+		},
+		{
+			"ruleName" : "Month_c1",
+			"extraction" : "$<Year4Digit>年$<MonthNumber>月份?",
+			"type" : "DATE",
+			"normalization" : "%NormDigit(group(1))-%NormMonth(group(2))-00"
+		},
+		{
+			"ruleName" : "Month_c2",
+			"extraction" : "$<Year2Digit>年$<MonthNumber>月份?",
+			"type" : "DATE",
+			"normalization" : "%NormCentury(NormDigit(group(1)))-%NormMonth(group(2))-00"
+		},
+		{
+			"ruleName" : "Month_c3",
+			"extraction" : "$<Era>$<YearCode>年$<MonthNumber>月份?",
+			"type" : "DATE",
+			"normalization" : "%NormEra(group(1))%NormDigit(group(2))-%NormMonth(group(3))-00"
+		},
+		{
+			"ruleName" : "Date_c1",
+			"extraction" : "$<Year4Digit>年$<MonthNumber>月$<DateLocalNumber>(日|号)",
+			"type" : "DATE",
+			"normalization" : "%NormDigit(group(1))-%NormMonth(group(4))-%NormNumber(group(7),2)"
+		},
+		{
+			"ruleName" : "Date_c2",
+			"extraction" : "$<Year2Digit>年$<MonthNumber>月$<DateLocalNumber>(日|号)",
+			"type" : "DATE",
+			"normalization" : "%NormCentury(NormDigit(group(2)))-%NormMonth(group(5))-%NormNumber(group(8),2)"
+		},
+		{
+			"ruleName" : "Date_c3",
+			"extraction" : "$<MonthNumber>月$<DateLocalNumber>(日|号)",
+			"type" : "DATE",
+			"normalization" : "LLLL-%NormMonth(group(1))-%NormNumber(group(2),2)"
+		},
+		{
+			"ruleName" : "Date_c4",
+			"extraction" : "$<DateLocalNumber>(日|号)",
+			"type" : "DATE",
+			"normalization" : "LLLL-LL-%NormNumber(group(1))"
+		},
+		{
+			"ruleName" : "Date_weekday_c1",
+			"extraction" : "$<Weekday>",
+			"type" : "DATE",
+			"normalization" : "LLLL-WLL-%NormWeekday(group(1))"
+		},
+		{
+			"ruleName" : "Date_holiday_c1",
+			"extraction" : "$<FixHolidayWords>",
+			"type" : "DATE",
+			"normalization" : "LLLL-%NormFixHoliday(group(1))"
+		},
+		{
+			"ruleName" : "Date_holiday_c2",
+			"extraction" : "$<Year4Digit>年$<FixHolidayWords>",
+			"type" : "DATE",
+			"normalization" : "%NormDigit(group(1))-%NormFixHoliday(group(2))"
+		},
+		{
+			"ruleName" : "Date_holiday_c3",
+			"extraction" : "$<Year2Digit>年$<FixHolidayWords>",
+			"type" : "DATE",
+			"normalization" : "%NormCentury(NormDigit(group(1)))-%NormFixHoliday(group(2))"
+		},
+		{
+			"ruleName" : "Date_relative_c1",
+			"extraction" : "$<YearThisNextLast>",
+			"type" : "DATE",
+			"normalization" : "DDDD-00-00 R%NormDirectionValue(group(1))"
+		},
+		{
+			"ruleName" : "Date_relative_c2",
+			"extraction" : "$<YearThisNextLast>的?$<MonthNumber>月份?",
+			"type" : "DATE",
+			"normalization" : "DDDD-%NormMonth(group(2))-00 R%NormDirectionValue(group(1))"
+		},
+		{
+			"ruleName" : "Date_relative_c3",
+			"extraction" : "$<YearThisNextLast>的?$<MonthNumber>月份?$<DateLocalNumber>(日|号)",
+			"type" : "DATE",
+			"normalization" : "DDDD-%NormMonth(group(2))-%NormNumber(group(3),2) R%NormDirectionValue(group(1))"
+		},
+		{
+			"ruleName" : "Date_relative_c4",
+			"extraction" : "$<ThisNextLast>个?月",
+			"type" : "DATE",
+			"normalization" : "DDDD-DD-00 R%NormDirectionValue(group(1))M"
+		},
+		{
+			"ruleName" : "Date_relative_c5",
+			"extraction" : "$<ThisNextLast>个?月$<DateLocalNumber>(日|号)",
+			"type" : "DATE",
+			"normalization" : "DDDD-DD-%NormNumber(group(2),2) R%NormDirectionValue(group(1))M"
+		},
+		{
+			"ruleName" : "Date_relative_c6",
+			"extraction" : "$<DayThisNextLast>",
+			"type" : "DATE",
+			"normalization" : "DDDD-DD-DD R%NormDirectionValue(group(1))"
+		},
+		{
+			"ruleName" : "Date_relative_c7",
+			"extraction" : "$<ThisNextLast>个?$<Weekday>",
+			"type" : "DATE",
+			"normalization" : "LLLL-WLL-%NormWeekday(group(2)) R%NormDirectionValue(group(1))W"
+		},
+		{
+			"ruleName" : "Date_relative_c8",
+			"extraction" : "第$<Integer>天",
+			"type" : "DATE",
+			"normalization" : "LLLL-LL-LL R+%add(NormNumber(group(1)), -1)D"
+		},
+		{
+			"ruleName" : "Date_relative_c9",
+			"extraction" : "第$<Integer>个月",
+			"type" : "DATE",
+			"normalization" : "LLLL-LL-00 R+%add(NormNumber(group(1)), -1)M"
+		},
+		{
+			"ruleName" : "Date_relative_c10",
+			"extraction" : "第$<Integer>年",
+			"type" : "DATE",
+			"normalization" : "LLLL-00-00 R+%add(NormNumber(group(1)), -1)Y"
+		},
+		{
+			"ruleName" : "Date_relative_c11",
+			"extraction" : "$<Integer>个$<TimeLengthNoun>$<BeforeAfter>",
+			"type" : "DATE",
+			"normalization" : "LLLL-LL-LL R%NormDirection(group(3))%NormNumber(group(2))"
+		},
+		{
+			"ruleName" : "Date_relative_c12",
+			"extraction" : "$<Integer>个?$<TimeLengthQuantifier>$<BeforeAfter>",
+			"type" : "DATE",
+			"normalization" : "LLLL-LL-LL R%NormDirection(group(3))%NormNumber(group(2))"
+		},
+		{
+			"ruleName" : "Time_c1",
+			"extraction" : "$<HourNumber>(时|点)(整|正)?",
+			"type" : "TIME",
+			"normalization" : "T%NormNumber(group(1)):00:00"
+		},
+		{
+			"ruleName" : "Time_c2",
+			"extraction" : "$<HourNumber>(时|点)半",
+			"type" : "TIME",
+			"normalization" : "T%NormNumber(group(1)):30:00"
+		},
+		{
+			"ruleName" : "Time_c3",
+			"extraction" : "$<HourNumber>(时|点)$<QuarterNumber>刻",
+			"type" : "TIME",
+			"normalization" : "T%NormNumber(group(1)):%Quarter4Hour(group(3)):00"
+		},
+		{
+			"ruleName" : "Time_c4",
+			"extraction" : "$<HourNumber>(时|点)过?$<MinuteSecondNumber>分?",
+			"type" : "TIME",
+			"normalization" : "T%NormNumber(group(1)):%NormNumber(group(3)):00"
+		},
+		{
+			"ruleName" : "Time_c5",
+			"extraction" : "$<HourNumber>(时|点)$<MinuteSecondNumber>分$<MinuteSecondNumber>秒?",
+			"type" : "TIME",
+			"normalization" : "T%NormNumber( group(1) ):%NormNumber( group(3) ):%NormNumber(group(4))"
+		},
+		{
+			"ruleName" : "Time_daypart",
+			"extraction" : "$<PartOfDay>",
+			"type" : "RANGE",
+			"normalization" : "%ExpandTimeRange(PartOfDayAsRange(group(1)))"
+		},
+		{
+			"ruleName" : "Time_daypart_c1",
+			"extraction" : "$<PartOfDay>$<HourNumber>(时|点)(整|正)?",
+			"type" : "TIME",
+			"normalization" : "T%ToDayInHour(NormPartOfDay(group(1)), group(2)):00:00"
+		},
+		{
+			"ruleName" : "Time_daypart_c2",
+			"extraction" : "$<PartOfDay>$<HourNumber>(时|点)半",
+			"type" : "TIME",
+			"normalization" : "T%ToDayInHour(NormPartOfDay(group(1)), group(2)):30:00"
+		},
+		{
+			"ruleName" : "Time_daypart_c3",
+			"extraction" : "$<PartOfDay>$<HourNumber>(时|点)$<QuarterNumber>刻",
+			"type" : "TIME",
+			"normalization" : "T%ToDayInHour(NormPartOfDay(group(1)), group(2)):%Quarter4Hour(group(4)):00"
+		},
+		{
+			"ruleName" : "Time_daypart_c4",
+			"extraction" : "$<PartOfDay>$<HourNumber>(时|点)过?$<MinuteSecondNumber>分?",
+			"type" : "TIME",
+			"normalization" : "T%ToDayInHour(NormPartOfDay(group(1)), group(2)):%NormNumber(group(4)):000"
+		},
+		{
+			"ruleName" : "Time_daypart_c5",
+			"extraction" : "$<PartOfDay>$<HourNumber>(时|点)$<MinuteSecondNumber>分$<MinuteSecondNumber>秒?",
+			"type" : "TIME",
+			"normalization" : "T%ToDayInHour(NormPartOfDay(group(1)), group(2)):%NormNumber(group(4)):%NormNumber(group(5))"
+		},
+		{
+			"ruleName" : "Range_simple_c1",
+			"extraction" : "$<Year4Digit>年$<PartOfYear>",
+			"type" : "RANGE",
+			"normalization" : "%NormDigit(group(1))-%NormPartOfYearBegin(group(2))/%NormDigit(group(1))-%NormPartOfYearEnd(group(2))/"
+		},
+		{
+			"ruleName" : "Range_simple_c2",
+			"extraction" : "$<Year2Digit>年$<PartOfYear>",
+			"type" : "RANGE",
+			"normalization" : "%NormCentury(NormDigit(group(1)))-%NormPartOfYearBegin(group(2))/%NormCentury(NormDigit(group(1)))-%NormPartOfYearEnd(group(2))"
+		},
+		{
+			"ruleName" : "Range_simple_c3",
+			"extraction" : "$<MonthNumber>月份?%<PartOfMonth>",
+			"type" : "RANGE",
+			"normalization" : "LLLL-%NormMonth(group(1))-%NormPartOfMonthBegin(group(2))/LLLL-%NormMonth(group(1))-%NormPartOfMonthEnd(group(2))/"
+		},
+		{
+			"ruleName" : "Range_relative_c1",
+			"extraction" : "$<ThisNextLast>个?(星期|礼拜|周)",
+			"type" : "RANGE",
+			"normalization" : "DDDD-WDD-1 R%Unit4Duration(group(1))D/DDDD-WDD-7 R%Unit4Duration(group(1))D/P7D"
+		},
+		{
+			"ruleName" : "Range_relative_c2",
+			"extraction" : "(今明|明后)两$<TimeLengthQuantifier>",
+			"type" : "RANGE",
+			"normalization" : "%Future4RelativePeriod(group(1))//P2%Unit4Duration(group(2))"
+		},
+		{
+			"ruleName" : "Range_relative_c3",
+			"extraction" : "$<NearFuture>$<Integer>个$<TimeLengthNoun>",
+			"type" : "RANGE",
+			"normalization" : "%Future4RelativePeriod(group(1))/P%NormNumber(group(2))%Unit4Duration(group(3))"
+		},
+		{
+			"ruleName" : "Range_relative_c4",
+			"extraction" : "$<NearFuture>$<Integer>$<TimeLengthQuantifier>",
+			"type" : "RANGE",
+			"normalization" : "%Future4RelativePeriod(group(1))/P%NormNumber(group(2))%Unit4Duration(group(3))"
+		},
+		{
+			"ruleName" : "Range_relative_c5",
+			"extraction" : "$<Integer>个$<TimeLengthNoun>之?内",
+			"type" : "RANGE",
+			"normalization" : "%FutureOrPast()/P%NormNumber(group(1))%Unit4Duration(group(2))"
+		},
+		{
+			"ruleName" : "Range_relative_c6",
+			"extraction" : "$<Integer>个?$<TimeLengthQuantifier>之?内",
+			"type" : "RANGE",
+			"normalization" : "%FutureOrPast()/P%NormNumber(group(1))%Unit4Duration(group(2))"
+		},
+		{
+			"ruleName" : "Duration_unit_c1",
+			"extraction" : "$<Integer>个$<TimeLengthNoun>",
+			"type" : "DURATION",
+			"normalization" : "P%NormMonth(group(1))%Unit4Duration(group(2))"
+		},
+		{
+			"ruleName" : "Duration_unit_c2",
+			"extraction" : "$<Integer>个?$<TimeLengthQuantifier>",
+			"type" : "DURATION",
+			"normalization" : "P%NormMonth(group(1))%Unit4Duration(group(2))"
+		},
+		{
+			"ruleName" : "Duration_unit_c3",
+			"extraction" : "$<ApproximateHead>$<Integer>个?$<TimeLengthQuantifier>",
+			"type" : "DURATION",
+			"normalization" : "P~%NormMonth(group(2))%Unit4Duration(group(3))"
+		},
+		{
+			"ruleName" : "Duration_unit_c4",
+			"extraction" : "$<Integer>个$<ApproximateMiddle>$<TimeLengthNoun>",
+			"type" : "DURATION",
+			"normalization" : "P~%NormMonth(group(1))%Unit4Duration(group(3))"
+		},
+		{
+			"ruleName" : "Duration_unit_c5",
+			"extraction" : "$<Integer>个$<TimeLengthNoun>左右",
+			"type" : "DURATION",
+			"normalization" : "P~%NormMonth(group(1))%Unit4Duration(group(2))"
+		},
+		{
+			"ruleName" : "Duration_unit_c6",
+			"extraction" : "$<Integer>个?$<TimeLengthQuantifier>左右",
+			"type" : "DURATION",
+			"normalization" : "P~%NormMonth(group(1))%Unit4Duration(group(2))"
+		},
+		{
+			"ruleName" : "Duration_group_c1",
+			"extraction" : "$<Integer>个$<TimeLengthNoun>(又|零)$<Integer>个?$<TimeLengthQuantifier>",
+			"type" : "DURATION",
+			"normalization" : "P%NormMonth(group(1))%Unit4Duration(group(2))%NormMonth(group(4))%Unit4Duration(group(5))"
+		},
+		{
+			"ruleName" : "Duration_group_c2",
+			"extraction" : "$<Integer>个?$<TimeLengthQuantifier>(又|零)$<Integer>个?$<TimeLengthQuantifier>",
+			"type" : "DURATION",
+			"normalization" : "P%NormMonth(group(1))%Unit4Duration(group(2))%NormMonth(group(4))%Unit4Duration(group(5))"
+		},
+		{
+			"ruleName" : "Duration_group_c3",
+			"extraction" : "$<Integer>个?$<TimeLengthQuantifier>(又|零) $<Integer>个$<TimeLengthNoun>",
+			"type" : "DURATION",
+			"normalization" : "P%NormMonth(group(1))%Unit4Duration(group(2))%NormMonth(group(4))%Unit4Duration(group(5))"
+		}
+	]
+}
