@@ -50,6 +50,7 @@
 			"name" : "MinuteSecondNumber",
 			"value": [
 				"0?[1-9]", "[1-5][0-9]", "０?[１-９]", "[１-５][０-９]"
+			]
 		}
 	],
 	"normalizers" : [],
