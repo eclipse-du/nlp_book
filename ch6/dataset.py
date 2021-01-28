@@ -37,30 +37,30 @@ def process_file(f, encoding='utf8'):
             # process nr tag
         if pair.endswith('nr'):
                 nr_word += word
-            elif len(nr_word) > 0:
-                x += nr_word
-                y += ' B-PER'+' I-PER'*(len(nr_word)-1)
-                nr_word = ''
-            if pair.endswith('nt'):
-                if pair.endswith(']nt'):
-                    word = nt_word+word
-                    nt_flag = False
-                x += word
-                y += ' B-ORG'+' I-ORG'*(len(word)-1)
-            # process ns tag
-            elif pair.endswith('ns'):
-                x += word
-                y += ' B-LOC'+' I-LOC'*(len(word)-1)
-            else:
-                x += word
-                y += ' O'*(len(word))
+        elif len(nr_word) > 0:
+            x += nr_word
+            y += ' B-PER'+' I-PER'*(len(nr_word)-1)
+            nr_word = ''
+        elif pair.endswith('nt'):
+            if pair.endswith(']nt'):
+                word = nt_word+word
+                nt_flag = False
+            x += word
+            y += ' B-ORG'+' I-ORG'*(len(word)-1)
+        # process ns tag
+        elif pair.endswith('ns'):
+            x += word
+            y += ' B-LOC'+' I-LOC'*(len(word)-1)
+        else:
+            x += word
+            y += ' O'*(len(word))
         if len(x) > 0:
             data.append(x+'\n')
             tag.append(y.strip()+'\n')
     return data, tag
 
 class CnNewsDataset(data.Dataset):
-    def __init__(self, fname=,is_preprocess=True, batch_size=BATCH_SIZE):
+    def __init__(self, fname,is_preprocess=True, batch_size=BATCH_SIZE):
         """
         CnNewsDataset
         """
